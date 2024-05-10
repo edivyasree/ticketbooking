@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 4000;
 app.use(express.json());
 app.use(cors());
 
-let seats = Array(20).fill(false);
+let seats = Array(10).fill(false);
 
 // Route to get available seats
 app.get('/seats', (req, res) => {
@@ -16,7 +16,7 @@ app.get('/seats', (req, res) => {
 // Route to book a seat
 app.post('/book', (req, res) => {
     const { seatNumber } = req.body;
-    if (seatNumber >= 1 && seatNumber < 21 && !seats[seatNumber]) {
+    if (seatNumber >= 1 && seatNumber < 10 && !seats[seatNumber]) {
         seats[seatNumber] = true;
         res.json({ success: true, message: `Seat ${seatNumber} booked successfully.` });
     } else {
