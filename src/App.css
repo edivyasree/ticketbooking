@@ -1,0 +1,34 @@
+/* App.css */
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.seats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.available {
+  background-color: green;
+  color: white;
+}
+
+.booked {
+  background-color: red;
+  color: white;
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
